@@ -11,7 +11,7 @@ import './app.css'
 if (new Date().getMonth() === 9 && localStorage.getItem('no-halloween') !== '1') document.body.classList.add('halloween')
 
 createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <AuthProvider>
@@ -19,5 +19,5 @@ createRoot(document.getElementById('root')!).render(
         </AuthProvider>
       </BrowserRouter>
     </QueryClientProvider>
-  </React.StrictMode>
+  </>
 )
